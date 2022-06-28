@@ -632,12 +632,12 @@ border: 0;
   .section-4 {
     flex-direction: column-reverse;
     width: 100%;
-    top: 2000px;
+    top: 8000px;
   }
   .box-section-4 {
     width: 100%;
-    margin: 0;
-    padding: 100px 16px;
+    margin-left: 100px;
+    padding: 240px 16px;
   }
   .section-4 img {
     width: 90%;
@@ -655,11 +655,13 @@ border: 0;
   .section-5 h5 {
     font-size: 30px;
     width: 90%;
-    margin: 120px 0px 0px 16px;
+    margin: 400px 0px 0px 16px;
   }
   .card {
     width: 90%;
   }
+
+
 
   /* --SIXTH SECTION-- */
   .section-6 {
@@ -713,6 +715,7 @@ border: 0;
   .box-section-8 {
     flex-direction: column;
     width: 100%;
+    padding: 0;
   }
   .text-section-8 {
     margin: 0;
@@ -720,7 +723,7 @@ border: 0;
   }
   .text-section-8 h5 {
     font-size: 30px;
-    margin: 120px 0px 0px 16px;
+    margin: 300px 0px 0px 16px;
   }
   .text-section-8 p {
     padding: 16px;
@@ -735,7 +738,6 @@ border: 0;
     margin: 40px 0;
     justify-content: space-between;
     grid-template-columns: repeat(2, 5fr);
-    
   }
   .box-section-8-icon figure {
     margin-bottom: 40px;

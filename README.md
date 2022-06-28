@@ -19,5 +19,6 @@ Teste para vaga pessoa engenheira de software - frontend.
 <br>
 
 ## Filipe Rodrigues da Silva
-- [linkedin](https://www.linkedin.com/in/filipe-rodrigues-da-silva-b582b062/)
-- [github](https://github.com/lipersilva)
+- [Linkedin](https://www.linkedin.com/in/filipe-rodrigues-da-silva-b582b062/)
+- [Github](https://github.com/lipersilva)
+
