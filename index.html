@@ -103,9 +103,17 @@
           placeholder="Insira seu e-mail" required
         >
         <label class="form-label w-100 mt-2 mb-2 label" for="phone">Seu telefone</label>
-        <input class="form-control field" type="tel" id="telefone" name="phone"
-          placeholder="Insira seu número de telefone com DDD"  required
+        <input 
+          class="form-control field" 
+          type="tel" 
+          id="telefone" 
+          name="phone"
+          maxlength="15"
+          placeholder="Insira seu número de telefone (99) 99999-9999" 
+          required
         >
+        <!-- pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"
+        data-mask-selectonfocus="true"   -->
         <label class="form-label w-100 mt-2 mb-2 label" for="job">Seu cargo de ocupação</label>
         <select class="form-select field" id="job" name="job" required>
           <option class="" value="" selected disabled>Selecione seu cargo</option>
@@ -168,7 +176,7 @@
           </ul>
         </div>
         <input class="w-100 mt-4 p-2 create-account" type="submit" id="createAccount" value="criar minha conta"
-              name="createAccount" required onclick=checkedForm() >
+              name="createAccount" required onclick=checkedForm()>
       </form>
     </section>
     <!-- section-2 -->

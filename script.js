@@ -27,39 +27,41 @@ function validateForm() {
 }
 
 function checkedForm (){
+  if (document.getElementById("formbox").validateForm() == false) {
+    alert("Preencha todos os campos");
+    return false;
+  }
   document.getElementById("formbox").style.visibility= "hidden";
   document.getElementById("title-section-2").innerHTML = "Cadastro realizado com sucesso!";
   document.getElementById("text-section-2").style.display= "none";
   setTimeout(function() {
     window.location.reload(1);
   }, 5000);
-  
 }
 
-// function verifyPassLength(){
-//   var password = document.getElementById("password-1").value;
-//   var password2 = document.getElementById("password-2").value;
-//   //check empty password field
-//   if(password == "" || password2 == "") {
-//     alert("Preencha o campo de senha");
-//     return false;
-//   }
-//   //Password minimum length
-//   if(password.length < 6 || password2.length < 6) {
-//     alert("A senha deve conter no mínimo 6 caracteres");
-//     return false;
-//   }
-//   //Password maximum length
-//   if(password.length > 10 || password2.length > 10) {
-//     alert("A senha deve conter no máximo 10 caracteres");
-//     return false;
-//   } else {
-//     alert("Success....! Password Verified.");
-//   }
+/* Máscaras para telefone */
+function mascara(o,f){
+  v_obj=o
+  v_fun=f
+  setTimeout("execmascara()",1)
+}
+function execmascara(){
+  v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+  v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+  v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+  v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+  return v;
+}
 
-//   if (password != password2) {
-//     alert("Senhas não conferem");
-//     return false;
-//   }
-// }
+function id( el ){
+  return document.getElementById( el );
+}
 
+window.onload = function(){
+  id('telefone').onkeyup = function(){
+  mascara( this, mtel );
+  }
+}
+/* FIM - Máscaras para telefone */
