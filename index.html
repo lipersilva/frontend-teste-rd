@@ -82,11 +82,18 @@
     <!-- section-2 -->
     <section class="p-4 section-2">
       <div class="mt-4 title-box">
-        <h4 class="mt-4 mb-3 title-section-2">Comece seus 10 dias de teste grátis do RD Station Marketing!
+        <h4 class="mt-4 mb-3 title-section-2" id="title-section-2">Comece seus 10 dias de teste grátis do RD Station Marketing!
         </h4>
-        <p class="mb-4 text-section-2">Não precisa cadastrar cartão de crédito. 😉</p>
+        <p class="mb-4 text-section-2" id="text-section-2">Não precisa cadastrar cartão de crédito. 😉</p>
       </div>
-      <form class=" mt-4 form-box" action="https://app.rdstation.com.br/signup" target="_blank" method="post">
+      <form 
+        class=" mt-4 form-box" 
+        id="formbox" 
+        action="https://app.rdstation.com.br/signup" 
+        target="_blank" 
+        method="post"
+        onsubmit="return validateForm()"
+      >
         <label class="form-label w-100 mb-2 label" for="name">Diga, qual seu nome?</label>
         <input class="form-control field" type="text" id="name" name="name" placeholder="Insira seu nome"
           required
@@ -161,7 +168,7 @@
           </ul>
         </div>
         <input class="w-100 mt-4 p-2 create-account" type="submit" id="createAccount" value="criar minha conta"
-              name="createAccount" required>
+              name="createAccount" required onclick=checkedForm() >
       </form>
     </section>
     <!-- section-2 -->
